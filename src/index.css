@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --Blue-200: #cee3e9;
+  --Green-300: #52ffa8;
+
+  --Blue-600: #4e5d73;
+  --Blue-900: #323a49;
+  --Blue-950: #1f2632;
+
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--Blue-950);
+  height: 100vh;
+}
+
+@keyframes roll-dice {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  25% {
+    transform: rotateX(180deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+
+  75% {
+    transform: rotateX(360deg) rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.roll-dice {
+  animation: roll-dice 2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-effect {
+  animation: fade 1s ease-in-out;
+}
